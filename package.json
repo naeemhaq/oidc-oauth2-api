@@ -4,7 +4,9 @@
   "description": "A sample Node.js and Express API secured with OAuth 2.0 that is part of The OpenID Connect Handbook.",
   "main": "index.js",
   "scripts": {
-    "start": "node src"
+    "start": "node src",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "keywords": [
     "OAuth 2.0",
@@ -21,13 +23,14 @@
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
     "express": "^4.16.4",
-    "express-jwt": "^5.3.1",
-    "helmet": "^3.15.1",
+    "express-jwt": "^6.0.0",
+    "helmet": "^3.21.1",
     "husky": "^3.0.2",
     "jwks-rsa": "^1.4.0",
     "lint-staged": "^9.2.1",
     "morgan": "^1.9.1",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "@snyk/protect": "latest"
   },
   "husky": {
     "hooks": {
@@ -42,5 +45,6 @@
   },
   "prettier": {
     "singleQuote": true
-  }
+  },
+  "snyk": true
 }
